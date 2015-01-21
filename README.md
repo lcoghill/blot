@@ -133,19 +133,19 @@ Desired number of sequences to use per taxon. Ultimately these will be combined 
 
 Name / location of the raw newick tree file.
 
-```tree_file_name = "/examples/centarchidae.tre"```
+```tree_file_name = "examples/centarchidae.tre"```
 
 Name / location of the corrections file.
 
-```corrections_file_name = "/examples/corrections.csv"```
+```corrections_file_name = "examples/corrections.csv"```
 
 Name / location of a directory to save the RAxML output trees.
 
-```raxml_dir = "/raxml/"```
+```raxml_dir = "raxml/"```
 
 Name / location of the RAxML constraint tree we generated earlier.
 
-```raxml_constraint = "/examples/constraint_tree.tre"```
+```raxml_constraint = "examples/constraint_tree.tre"```
 
 Number of iterations for the Muscle alignment. 
 
