@@ -15,6 +15,7 @@ The following are the package requirements to run the scripts, and how to instal
 #### Example Walkthrough ####
 This assumes some type of Linux environment with access to a package manager like apt-get or yum.
 
+##### Downloading and setting up the pipeline #####
 The first step is to download the scripts and the example data. You can acheive this with the following command:
 ``` 
 git clone https://github.com/lcoghill/blot
@@ -26,6 +27,10 @@ You should end up with a newick tree that has a format like:
 ((Acantharchus_pomotis_ott476356)Acantharchus_ott476355,...
 ```
 In this case, the format is Genus_species_opentreeIDnumber.
+
+##### Building a RAxML constraint tree #####
+
+##### Validating data and building a corrections file #####
 
 Next, we need to set up a corrections file. This is just a simple file in csv format that makes the script aware of any changes that need to be applied to taxon names. The OTT (open tree taxonomy) is a amalgamation of many other taxonomies into a single source. This can create a problem with fetching data from Genbank as it will only recognize scientific names that are present in the NCBI taxonomy. There is a script to help with this, called validate-data.py. You can run this script with the tree file and target gene, and it will let you know if there are taxa that aren't found, or any taxa for which your target gene has no data present in Genbank. 
 
@@ -105,6 +110,8 @@ this will force the script to only validate that the given accession number is p
 This will likely be the most time consuming part of the pipeline. You'll likely have to do some literature research, or have an extensive knowledge of your group, in order to build a helpful and accurate corrections file. In the end, some calls may be subjective in nature as well. If you are concerned about that, you can always tweak the corrections file and run it multiple times to inspect your results.
 
 The final item to check in the validation output is the estimated number of sequences in genbank for a given taxon and gene. We can see in our example output above that many of a taxa only have 1 or 2 sequences availabe for the ND2 gene. Some have 0, but it is likely once we build the corrections file, some data will be present for all taxa. However, keep this in mind when suggestion the number of sequences per taxa to use when running blot. The script will run, even if your desired number of sequences per taxa aren't present, however, it will throw some errors up along the way.
+
+##### Building the final tree #####
 
 Once your data (raw tree, corrections file and constraint tree) are ready, we can actually proceed to building the tree with branch lengths.
 
