@@ -26,6 +26,7 @@ You should end up with a newick tree that has a format like:
 ((Acantharchus_pomotis_ott476356)Acantharchus_ott476355,...
 ```
 In this case, the format is Genus_species_opentreeIDnumber.
+
 Next, we need to set up a corrections file. This is just a simple file in csv format that makes the script aware of any changes that need to be applied to taxon names. The OTT (open tree taxonomy) is a amalgamation of many other taxonomies into a single source. This can create a problem with fetching data from Genbank as it will only recognize scientific names that are present in the NCBI taxonomy. There is a script to help with this, called validate-data.py. You can run this script with the tree file and target gene, and it will let you know if there are taxa that aren't found, or any taxa for which your target gene has no data present in Genbank. 
 
 ```
