@@ -25,3 +25,17 @@ You should end up with a newick tree that has a format like:
 ```
 ((Acantharchus_pomotis_ott476356)Acantharchus_ott476355,...
 ```
+In this case, the format is Genus_species_opentreeIDnumber. 
+
+Now that we have the data, we need to set some basic parameters in the script: 
+```
+gene = ""
+email = ""
+seqs_per_taxon = X
+tree_file_name = ""
+corrections_file_name = ""
+raxml_dir = ""
+raxml_constraint = ""
+max_muscle_iters = ""
+max_muscle_trees = ""
+```
