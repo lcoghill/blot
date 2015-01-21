@@ -108,7 +108,9 @@ The final item to check in the validation output is the estimated number of sequ
 
 Once your data (raw tree, corrections file and constraint tree) are ready, we can actually proceed to building the tree with branch lengths.
 
-First, we need to set some basic parameters in the script as before: 
+First, we need to set some basic parameters in the script as before.
+Below are the suggestions for the example data.
+
 
 This is the target gene to fetch data for:
 
