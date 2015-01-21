@@ -154,3 +154,18 @@ Number of iterations for the Muscle alignment.
 Number of trees to build per Muscle iteration.
 
 ```max_muscle_trees = "2"```
+
+Once all of the parameters are set, you can run blot with:
+
+```
+python blot.py
+```
+Once the script is running you may get some warnings:
+
+```
+Warning: there are fewer than 3 ND2 sequences available for Acantharchus pomotis. Using all 1 available.
+```
+If this happens, you can either let the script continue with fewever sequences than you designated, it will run fine, or you can go back and revise your input data as needed.
+
+The raw sequence data for each taxa is saved in a folder named /fasta with the name of the taxa and gene in question in fasta format. Additionally the alignment for each of these fasta files is saved here as well for the building of the consensus sequence. The raw consensus sequences for each taxa will be written to the same directory where your tree file is, in our case examples/centarchidae_ND2_sequences.fas in fasta format. This file is then aligned with Muscle. The ouput during the alignment will be displayed so you can monitor the progress of the alignment. Depending on your number of taxa, length of sequences etc., this stage may take a little time.
+
