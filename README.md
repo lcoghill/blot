@@ -19,3 +19,4 @@ The first step is to download the scripts and the example data. You can acheive 
 ``` 
 git clone https://github.com/lcoghill/blot
 ```
+In this case the example data is a tree of Centarchidae downloaded from the [tree.opentreeoflife.org](https://tree.opentreeoflife.org) web application. You can replicate this by navigating to the page, typing Centarchidae in the search box on the upper right side of the page, and then clicking on the link that says "[Download subtree as Newick string](https://tree.opentreeoflife.org/opentree/argus/ottol@437610/Centrarchidae)".
