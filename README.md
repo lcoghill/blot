@@ -32,6 +32,9 @@ Next, we need to set up a corrections file. This is just a simple file in csv fo
 ```
 python validate-data.py
 ```
+If there is data present for all your taxa on the target gene, you are set to move on. If not, you can run this script multiple times and use it to help guide building your corrections.csv file. 
+
+
 
 Now that we have the data, we need to set some basic parameters in the script: 
 ```
